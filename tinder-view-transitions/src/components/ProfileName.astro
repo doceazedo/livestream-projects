@@ -1,0 +1,40 @@
+---
+interface Props {
+	darkText?: boolean;
+}
+
+const { darkText } = Astro.props;
+---
+
+<div
+  class="profile"
+  class:list={[{ 'dark-text': darkText }]}
+  transition:name="profile-name"
+  transition:animate="initial"
+>
+  <h1 class="name">Doce, 20</h1>
+  <p class="info">1km de distância</p>
+</div>
+
+<style>
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding: 1rem;
+    color: #fff;
+
+    &.dark-text {
+      color: #000;
+    }
+
+    .name {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .info {
+      opacity: .8;
+    }
+  }
+</style>

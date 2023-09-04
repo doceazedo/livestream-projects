@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Picture from '../components/Picture.astro';
+import ProfileName from '../components/ProfileName.astro';
+import ProfileDetails from '../components/ProfileDetails.astro';
+---
+
+<Layout title="Tinder | Home">
+	<a class="card-link" href="/">
+		<Picture />
+	</a>
+	<ProfileDetails />
+</Layout>
+
+<style>
+	.card-link {
+		-webkit-tap-highlight-color: transparent;
+	}
+</style>
